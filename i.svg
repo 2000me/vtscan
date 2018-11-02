@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="96pt" height="96pt" viewBox="0 0 96 96"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <style type="text/css"><![CDATA[
+    .b { fill:#3b61ff; ; stroke:black; stroke-width:5 }
+    .t { fill:black; font-size:56pt; stroke:none;
+         font-family:ForoSans, Helvetica, sans-serif }
+  ]]></style>
+
+  <path class="b"
+    d="M 4,14
+       C24,14 24,18 48, 4
+       C72,18 72,14 92,14
+       C92,92 60,88 48,92
+       C36,88  4,92  4,14z
+  "/>
+
+  <text class="t" x="24" y="78">V</text>
+
+</svg>

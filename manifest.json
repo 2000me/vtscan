@@ -1,0 +1,18 @@
+{
+    "author": "vtscan@gmx.de",
+    "background": {
+		"page": "b.html"
+    },
+    "description": "Scan URL with VirusTotal",
+    "homepage_url": "https://www.github.org/2000me/vtscan",
+    "icons": {
+        "16": "i.svg"
+    },
+    "manifest_version": 2,
+    "name": "VirusTotal Scan",
+    "permissions": [
+        "contextMenus",
+		"https://www.virustotal.com/*"
+	],
+    "version": "0.5.3"
+}
