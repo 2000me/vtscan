@@ -1,0 +1,22 @@
+{
+    "extensionName": {
+        "message": "VirusTotal Scan"
+    },
+    "extensionDescription": {
+        "message": "Scan URL with VirusTotal"
+    },
+    "notifyQueuedAndPolling": {
+        "message": "VirusTotal Scan queued.\nPolling every $POLL_INTERVAL_SECONDS$ seconds for the results...",
+        "placeholders": {
+            "POLL_INTERVAL_SECONDS": {
+                "content": "$1"
+            }
+        }
+    },
+    "notifyStillQueuedStoppedPolling": {
+        "message": "VirusTotal Scan still queued. Stopped polling for the results.\nPlease select VirusTotal Scan again in a minute or later."
+    },
+    "notifyUnexpectedResponse": {
+        "message": "Received unexpected response. Please retry."
+    }
+}

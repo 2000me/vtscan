@@ -3,16 +3,18 @@
     "background": {
 		"page": "b.html"
     },
-    "description": "Scan URL with VirusTotal",
+    "default_locale": "en",
+    "description": "__MSG_extensionDescription__",
     "homepage_url": "https://www.github.com/2000me/vtscan",
     "icons": {
         "16": "i.svg"
     },
     "manifest_version": 2,
-    "name": "VirusTotal Scan",
+    "name": "__MSG_extensionName__",
     "permissions": [
         "contextMenus",
+        "notifications",
 		"https://www.virustotal.com/*"
 	],
-    "version": "0.5.4"
+    "version": "0.6.0"
 }
