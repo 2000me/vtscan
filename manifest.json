@@ -14,7 +14,7 @@
     "permissions": [
         "contextMenus",
         "notifications",
-		"https://www.virustotal.com/*"
-	],
-    "version": "0.6.0"
+        "https://www.virustotal.com/*"
+    ],
+    "version": "0.6.1"
 }
