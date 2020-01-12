@@ -11,10 +11,14 @@
     },
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": true
+    },
     "permissions": [
         "contextMenus",
         "notifications",
-		"https://www.virustotal.com/*"
-	],
-    "version": "0.6.0"
+        "https://www.virustotal.com/*"
+    ],
+    "version": "0.6.1"
 }
