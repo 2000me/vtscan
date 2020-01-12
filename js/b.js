@@ -116,3 +116,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
         scan(SCAN_URL_PREFIX +  info.linkUrl, REPORT_URL_PREFIX + info.linkUrl);
 	}
 });
+
+if (localStorage.getItem("TabOrWindow") == null) {
+  localStorage.setItem("TabOrWindow", "w");
+};
