@@ -65,13 +65,16 @@ function pollReport(responseJson, reportUrl, i) {
             notifyUsingBasicNotification(
                 browser.i18n.getMessage('notifyStillQueuedStoppedPolling')
             );
-        }        
+        }
     } else {
         var id = responseJson.scan_id.substring(0, 64);
         if (id.match(/^[0-9a-f]{64}$/)) {
-            browser.windows.create({
-                url: DETECTION_URL_PREFIX + id + DETECTION_URL_SUFFIX
-            });
+            var pUrl = DETECTION_URL_PREFIX + id + DETECTION_URL_SUFFIX
+            if (localStorage.getItem("TabOrWindow") == "w") {
+                browser.windows.create({url: pUrl});
+            } else {
+                browser.tabs.create({url: pUrl});
+            }
         } else {
             notifyUsingBasicNotification(
                 browser.i18n.getMessage('notifyUnexpectedResponse')
