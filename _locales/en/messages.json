@@ -18,5 +18,14 @@
     },
     "notifyUnexpectedResponse": {
         "message": "Received unexpected response. Please retry."
+    },
+    "options_resultsDisplayLabel": {
+        "message": "Results display: "
+    },
+    "option_tab": {
+        "message": "new tab"
+    },
+    "option_window": {
+        "message": "new window"
     }
 }
