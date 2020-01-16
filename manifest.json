@@ -18,7 +18,8 @@
     "permissions": [
         "contextMenus",
         "notifications",
+        "storage",
         "https://www.virustotal.com/*"
     ],
-    "version": "0.6.1"
+    "version": "0.6.2"
 }
