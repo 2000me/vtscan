@@ -23,7 +23,11 @@ function notifyUsingBasicNotification(msg) {
 
 function notifyResponseError(error) {
     var msg;
-    if (error.response.status == 204) {
+    if (
+      typeof error.response != 'undefined' &&
+      typeof error.response.status != 'undefined' &&
+      error.response.status == 204)
+    {
         msg = browser.i18n.getMessage('notifyStillQueuedStoppedPolling');
     } else {
         msg = browser.i18n.getMessage('notifyUnexpectedResponse');
