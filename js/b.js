@@ -74,11 +74,13 @@ function pollReport(responseJson, reportUrl, i) {
         var id = responseJson.scan_id.substring(0, 64);
         if (id.match(/^[0-9a-f]{64}$/)) {
             var pUrl = DETECTION_URL_PREFIX + id + DETECTION_URL_SUFFIX
-            if (localStorage.getItem("TabOrWindow") == "w") {
-                browser.windows.create({url: pUrl});
-            } else {
-                browser.tabs.create({url: pUrl});
-            }
+            browser.storage.local.get("TabOrWindow").then(result => {
+                if (result.TabOrWindow == "t") {
+                    browser.tabs.create({url: pUrl});
+                } else {
+                    browser.windows.create({url: pUrl});
+                }
+            })
         } else {
             notifyUsingBasicNotification(
                 browser.i18n.getMessage('notifyUnexpectedResponse')
@@ -121,6 +123,13 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 	}
 });
 
-if (localStorage.getItem("TabOrWindow") == null) {
-  localStorage.setItem("TabOrWindow", "w");
-};
+browser.storage.local.get("TabOrWindow").then(result => {
+    if (typeof result.TabOrWindow === "undefined") {
+        if (localStorage.getItem("TabOrWindow") != null) {
+            browser.storage.local.set({"TabOrWindow": localStorage.getItem("TabOrWindow")});
+            localStorage.removeItem("TabOrWindow");
+        } else {
+            browser.storage.local.set({"TabOrWindow": "w"});
+        }
+    }
+});
